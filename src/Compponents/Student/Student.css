@@ -1,0 +1,53 @@
+.studentInfo{
+    display: flex;
+    align-items: center;
+    background-color: dodgerblue;
+    color: white;
+    justify-content: space-around;
+    font-family: sans-serif;
+    text-align: start;
+    font-style: italic;
+    height: 50vh; 
+    margin-bottom: 50px;
+    
+    
+}
+.dot li {
+    color: white;
+}
+
+.studentdata{
+    display: flex;
+    background-color: dodgerblue;
+    color: white;
+    text-align: start;
+    margin-bottom: 32px;
+    justify-content: space-around;
+
+}
+
+.Studentnew{
+    width: 300px;
+    height: 500px;
+    display: flex;
+    
+    grid-template-columns: repeat(2,150px);
+    grid-template-rows: repeat(2,150px);
+    
+
+    display: flex;
+    background-color: dodgerblue;
+    color:aliceblue;
+    text-align: start;
+    margin-bottom: 32px;
+    justify-content:space-around;
+    border: 5px solid black;
+    overflow: auto;
+}
+.Backgrnd{
+    background-color: yellowgreen;
+}
+.Studentnames{
+      display: flex;
+       border: 2px solid  aliceblue;
+}
