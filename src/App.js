@@ -1,4 +1,5 @@
-import { Student, Student1, Student2, Student3 } from "./Compponents/Student/Student";
+import Images from "./Compponents/Images";
+import { Student, Student1, Student2, Student3, Student5, Student6 } from "./Compponents/Student/Student";
 
 
 const App = () => {
@@ -18,14 +19,36 @@ const arr = [{
   profession:"sekteching"
 }];
 const names = ['James', 'Paul', 'John', 'George', 'Ringo'];
+ 
+   const task = [{
+    name: "Haroon",
+    email :"haroon@gmail.com",
+    age: 60
+   },
+  {
+    name:"Hamza",
+    email:"hamza@gmail.com",
+    age : 50
+  },{
+    name:"khalid",
+    email:"khalid@gmail.com",
+    age: 40
+  }];
 
   return (
-    <div>
-      <Student data={data}/>
-       {/* <Student1 data={data} />
-       <Student2 arr = {arr} /> */}
-        <Student3 name= {names} />
-      
+    <div className="Backgrnd">
+      <h1 className="head">React-Practice</h1>
+      {/* <Student data={data}/>
+       <Student1 data={data} />
+       <Student2 arr = {arr} />
+        <Student3 names= {names} /> */}
+        <div className="img1">
+          
+      <Images />
+      <Images />
+      </div>
+      {/* <Student5  task={task} /> */}
+      <Student6 task={task} />
       </div>
   )
   }  

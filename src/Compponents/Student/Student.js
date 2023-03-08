@@ -19,11 +19,63 @@ export const Student2 = (props) => {
     and my cast is {z.cast}{z.profession}</div>))
 };
 export const Student3 = (props) => {
-  return props?.names.map((a) => {
-    return <div className="Studentnames">
-      <li>
-        names:{a}
+  return props?.names?.map((a) =>  (<div className="Studentnames">
+    <li>
+      Name:{a}
       </li>
+    
     </div>
-  })
+    ))
+};
+export const Student4 = (props) =>{
+  return props?.intro?.map((n) =>(<div>
+   <ol className="list">
+    <li>{n.name}</li>
+   <li>{n.status}</li>
+   <li> {n.profession}</li>
+   
+    </ol>
+  </div>))
+};
+export const Student5 = (props) =>{
+  return props?.task?.map((t)=>(
+  
+    <div> 
+      <ul>
+        <li>My name is {t.name}</li>
+        <li>Email is {t.email}</li>
+        <li>age is {t.age}</li>
+    </ul>
+    </div>
+  ))
 }
+export const Student6 = (props) =>{
+  return props?.task?.map((t)=>{
+    if(t.age > 50 ){return  <div>
+
+      <ul>
+      <li>above 50</li>
+        <li>My name is {t.name}</li>
+      <li>My email is {t.email}</li>
+      <li>My age is  {t.age}</li>
+      </ul>
+      
+    </div>
+    };
+    if(t.age <= 50 ){return  <div>
+      <ul>
+      <li>less than 50</li>
+        <li>My name is {t.name}</li>
+      <li>My email is {t.email}</li>
+      <li>My age is  {t.age}</li>
+      </ul>
+      
+    </div>
+    };
+
+      
+
+  });
+  
+    
+};
