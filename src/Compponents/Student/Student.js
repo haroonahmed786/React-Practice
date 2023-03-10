@@ -72,10 +72,15 @@ export const Student6 = (props) =>{
       
     </div>
     };
-
-      
-
-  });
-  
-    
+  });  
 };
+ export const Arr1 = (props) =>{
+  let a= props.x.filter((x)=>{
+   return x.age> 50
+  
+  }
+
+  )
+  console.log(a);
+}
+

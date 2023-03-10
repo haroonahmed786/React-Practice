@@ -10,7 +10,7 @@ import { Student4 } from './Student/Student';
   return (
     <div>
         <Student4 intro = {intro} />
-        <img src ={MyImage} alt="" />
+        <img src ={MyImage} alt="" border="5px solid black" />
     </div>
   )
 }
