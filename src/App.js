@@ -1,7 +1,7 @@
 import React from "react";
 import Images from "./Compponents/Images";
 import { Student, Student1, Student2, Student3, Student5, Student6 ,Arr1,} from "./Compponents/Student/Student";
-
+import ArrayFilter from "./Compponents/Student/Filter";
 const Names = ['James', 'John', 'Paul', 'Ringo', 'George'];
 const App = () => {
   const data=[{
@@ -50,6 +50,7 @@ const arr = [{
       age: 40
     }];
    
+    
   return (
     <div className="Backgrnd">
       <h1 className="head">React-Practice</h1>
@@ -71,13 +72,7 @@ const arr = [{
     
      <div>
 </div>
-    <div>
-      {Names.filter(Name => Name.includes('J')).map(filteredName => (
-        <li>
-          {filteredName}
-        </li>
-      ))}
-    </div>
+  <ArrayFilter />
 
       </div>
        
