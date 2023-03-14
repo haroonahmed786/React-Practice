@@ -74,7 +74,6 @@ const arr = [{
 </div>
   <ArrayFilter />
 
-
       </div>
        
          

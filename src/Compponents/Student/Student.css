@@ -91,3 +91,24 @@
     border: 3px solid black;
    background-color: aqua;
 }
+.App{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.h1 {
+    display: block;
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid black ;
+    background-color: aqua;
+    margin: 0px -170px 150px 0px;
+    
+    
+}
+
+.h1:hover{
+  background-color: antiquewhite;
+  justify-content: space-between;
+}

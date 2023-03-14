@@ -83,4 +83,3 @@ export const Student6 = (props) =>{
   )
   console.log(a);
 }
-
