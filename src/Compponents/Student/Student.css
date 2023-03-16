@@ -35,9 +35,8 @@
     justify-content:space-around;
     height: 50px;
 }
-.Backgrnd{
-    background-color: yellowgreen;
-}
+
+
 .Studentnames {
     display: flex;
     align-items: center;
@@ -95,6 +94,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 50px;
 }
 .h1 {
     display: block;
@@ -111,4 +111,39 @@
 .h1:hover{
   background-color: antiquewhite;
   justify-content: space-between;
+  transform: scale(0.6);
+  transition-duration: 0.5s;
+ 
+}
+.App1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+}
+
+.btn{
+    border: 2px groove black;
+    background-color: aqua;
+    color: blue;
+}
+.btn:hover{
+    background-color: yellow;
+}
+
+.inc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   border: 2px groove black;
+    width: 20%;
+    height: 200px;
+    background-color: aqua;
+}
+.inc:hover{
+    background-color: skyblue;
+}
+.btn1:hover{
+    background-color: yellow;
+    
 }

@@ -20,6 +20,8 @@ const ArrayFilter = () => {
 ];
 //////
 
+
+
 ////////////
 const initialState = [
   { id: 1, name: 'Banana', amount: 5 },
@@ -65,19 +67,23 @@ const initialStated = [
     ])
     const deleteById = id => {
       setFruits(oldValues => {
-        return oldValues.filter(fruit => fruit.id ==! 1)
+        return oldValues.filter(fruit => fruit.id === id)
       })
     } 
-    const [car, setCar] = useState([
+    const [cars, setCars] = useState([
       {id:1, name:"ODDI"},
       {id:2, name:"HONDA"},
       {id:3, name:"CIVIC"}
     ]);
      const deleteById1 = id => {
-           setCar(oldCar => {
-            return oldCar.filter(car.id === id)
+           setCars(oldCar => {
+            return oldCar.filter(car =>car.id === id)
            })
+           
         }
+
+        //////////
+        
         
     return (
       
@@ -90,24 +96,25 @@ const initialStated = [
             return (
               <li key={fruit.id}>
                 <span>{fruit.name}</span>
-                <button onClick={() => deleteById1(fruit.id)}>Delete</button>
+                <button onClick={() => deleteById(fruit.id)}>Delete</button>
               </li>
             )
           })}
         </ul>
-        <div className="App">
+        <div className="App1">
        <h1 className="h1">ArrayFilter</h1>
         <ul>
-          {car.map(car => {
+          {cars.map(car => {
             return (
               <li key={car.id}>
                 <span>{car.name}</span>
-                <button onClick={() => deleteById(car.id)}>Delete</button>
+                <button onClick={() => deleteById1(car.id)}>Delete</button>
               </li>
             )
           })}
         </ul>
       </div>
+      
       </div>
       
       
