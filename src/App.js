@@ -3,6 +3,7 @@ import Images from "./Compponents/Images";
 import { Student, Student1, Student2, Student3, Student5, Student6 ,Arr1,} from "./Compponents/Student/Student";
 import ArrayFilter from "./Compponents/Student/Filter";
 import App1 from "./Compponents/Student/State";
+import LoginForm from "./Compponents/Student/Form";
 const Names = ['James', 'John', 'Paul', 'Ringo', 'George'];
 const App = () => {
   const data=[{
@@ -75,6 +76,7 @@ const arr = [{
 </div>
   <ArrayFilter />   
   <App1 />
+  <LoginForm />
       </div>
        
          

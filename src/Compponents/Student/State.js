@@ -27,17 +27,19 @@ import React, { useState } from "react";
     setCount (count + 1);
      }
      /////
-     const [values,setValues] = useState (
-        {name: "Haroon", lastName:"Ahmed"},
-        {name: "Ali", lastName:"Hassan"}
-     )
-     const upDate = (xy) =>{
-        setValues (oldN =>{
-            return oldN.filter(name => name.name === xy);
+     const [values, setValues] = useState ([
+        {name: "Haroon"},
+        {name: "Ali" }
+     ])
+     const checkDelte = (xy) =>{
+        setValues(oldName1 =>{
+            return oldName1.filter(name => name.name !== xy);
         })
         
      }
 
+
+     
  
     return(
         <div>
@@ -70,16 +72,15 @@ import React, { useState } from "react";
          </div>
          <div>
             <ul>
-            {values.map(values => {
-                return(
-                    <li key={values.name}>
-                    <span>{values.name} and {values.lastName}</span>
-                    <button onClick={()=>upDate (values.name)}></button>
-                    </li>
-                )
-            })}
-        </ul>
-       
+                {values.map(values =>{
+                    return(
+                        <li key={values.name}>
+                        <span>{values.name}</span>
+                        <button type="button" onClick={() => checkDelte (values.name)}>myClick</button>
+                        </li>
+                    )
+                })}
+            </ul>
         </div>
         </div>
     )
