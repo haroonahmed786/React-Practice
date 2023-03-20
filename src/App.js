@@ -4,6 +4,7 @@ import { Student, Student1, Student2, Student3, Student5, Student6 ,Arr1,} from 
 import ArrayFilter from "./Compponents/Student/Filter";
 import App1 from "./Compponents/Student/State";
 import LoginForm from "./Compponents/Student/Form";
+import Login from "./Compponents/Student/Login";
 const Names = ['James', 'John', 'Paul', 'Ringo', 'George'];
 const App = () => {
   const data=[{
@@ -77,6 +78,7 @@ const arr = [{
   <ArrayFilter />   
   <App1 />
   <LoginForm />
+  <Login />
       </div>
        
          

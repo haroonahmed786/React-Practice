@@ -26,6 +26,10 @@ import React, { useState } from "react";
       const inCm = () =>{
     setCount (count + 1);
      }
+     
+      const inCmm = () =>{
+    setCount (count - 1);
+     }
      /////
      const [values, setValues] = useState ([
         {name: "Haroon"},
@@ -69,6 +73,7 @@ import React, { useState } from "react";
             
           <h1>{count}</h1>
           <button  className="btn1" onClick={inCm}>Click</button>
+            <button  className="btn1" onClick={inCmm}>Click</button>
          </div>
          <div>
             <ul>

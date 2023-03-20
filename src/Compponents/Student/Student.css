@@ -132,7 +132,7 @@
 }
 
 .inc{
-    display: flex;
+    
     justify-content: center;
     align-items: center;
    border: 2px groove black;
@@ -147,7 +147,10 @@
     background-color: yellow;
     
 }
-
+.btn1{
+    display: flex;
+    margin-left: 50px;
+}
 .form{
     border: 2px groove black;
     padding: 10px;
@@ -159,4 +162,12 @@
 }
 .sh:hover{
     background-color: blanchedalmond;
+}
+.Login{
+    border: 2px groove black;
+    padding: 10px;
+    background-color: aquamarine;
+}
+.log:hover{
+    background-color: grey;
 }
