@@ -1,22 +1,22 @@
 import React,{useState} from "react";
 
 function LoginForm() {
-    const [form, setState] = useState({
-      username: '',
-      password: ''
-    });
+    // const [form, setState] = useState({
+    //   username: '',
+    //   password: ''
+    // });
   
-    const printValues = e => {
-      // e.preventDefault();
-      // console.log(form.username, form.password);
-    };
+    // const printValues = e => {
+    //   // e.preventDefault();
+    //   // console.log(form.username, form.password);
+    // };
   
-    const updateField = e => {
-      setState({
-        ...form,
-        [e.target.name]: e.target.value  
-      });
-    };
+    // const updateField = e => {
+    //   setState({
+    //     ...form,
+    //     [e.target.name]: e.target.value  
+    //   });
+    // };
 
     const [data, setData] = useState(
       {
@@ -26,25 +26,27 @@ function LoginForm() {
         address:""
       }
     )
-    const dataPrint = e =>{
-           
-    };
+    const [showData, setShowData] = useState(false);
+
+  
      const updateData  = e =>{
       setData({
         ...data,
         [e.target.name] : e.target.value
        })
      }
-   // State for username
-   const [name, setName] = useState("jon doe");
+  //  // State for username
+  //  const [name, setName] = useState("jon doe");
   
-   // Function to change name
-   function changeName(e) {
-     setName(e.target.value);
-   }
+  //  // Function to change name
+  //  function changeName(e) {
+  //    setName(e.target.value);
+  //  }
+  console.log("Show data is",showData)
     return (
-        <div>
-      <form onSubmit={printValues}>
+      
+      <div>
+      {/* <form onSubmit={printValues}>
         <label>
           Username:
           <input
@@ -82,11 +84,11 @@ function LoginForm() {
       <input value={name} onChange={changeName} ></input>
       <button>change</button>
     </div>
-    <br />
-
+    <br /> */}
+{/* 
     <div className="form">
       <h1><i>Form Page :~</i></h1>
-      <form onSubmit={dataPrint}> 
+      <form onSubmit={updateData}> 
        <label>
            name:
            <input
@@ -153,14 +155,26 @@ function LoginForm() {
        <br />
        <br />
        <div className="sign">
-       <button  className="sh" onChange={dataPrint}>SignIn</button>
-       <button  className="sh" onChange={dataPrint}>SignUp</button>
-       </div>
-      </form>
-    </div>
-      </div>
+       <button  className="sh" onClick={(e,x)=> {
+        e.prevent.default()
+        setShowData(!x)}}>SignIn</button>
+   
+       {/* {showData?
+       data?.map((x) =>(
+          <div>
+            <li>{x.name}</li>
+           <li> {x.email}</li>
+            <li>{x.password}</li>
+            </div>
+         )
+  //       )
+  //      :""} */}
+  {/* //      </div> */}
+  {/* //     </form> */}
+  //    </div>
+  //    </div> */}
     );
-    
+
   }
   
   export default LoginForm;
