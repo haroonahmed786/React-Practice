@@ -2,15 +2,20 @@ import React, { useState } from 'react';
 
 function Login() {
 
-	const [form, setForm] = useState([{
+	const [form, setForm] = useState([
+		{
 		username: '',
 		email: "",
 		password: ''
-	}]);
+	}
+  ]);
 
 	const [showData, setShowData] = useState(false);
 	
-	
+	const handleClick =() => {
+		console.log("Form data is",form)
+             setShowData (!showData)
+	}
 
 	return (
 		<div className='Login'>
@@ -58,20 +63,22 @@ function Login() {
 			
 			<br />
 			<button style={{ padding: "10px 10px", backgroundColor: "whitesmoke" }}
-			 onClick={ () => { setShowData (!showData)}}>{showData ? "hide data" : "show data"}</button>
-		
-			{/* </form> */}
-
-            
+			 onClick={handleClick}>{showData ? "hide data👍" : "show data"}</button>
+		     
 			{showData? 
-			form.map((x) => {
-					<div>
-						{x.username},
-						{x.email},
-						{x.password}
-					</div>
-                    })
-					:""}
+			  <div>
+				{form.username},
+				<br />
+				{form.email},
+				<br />
+				{form.password}
+			  </div>
+
+				
+			  
+			
+			: ""}
+
 
 		</div>
 	);
