@@ -11,22 +11,26 @@ function Login() {
   ]);
 
 	const [showData, setShowData] = useState(false);
+	const [disable,setDisable] = useState(false);
 	
-	const handleClick =() => {
-		console.log("Form data is",form)
+	const handleClick =(e) => {
+		 e.preventDefault()
              setShowData (!showData)
+			 
 	}
 
 	return (
-		<div className='Login'>
+		<form  className='Login' onSubmit={handleClick}>
+		<div>
 			<h1>LoginForm</h1>
-			{/* <form onSubmit={printValues}> */}
+			
 			<label>
 				Username:
 				<input
 					value={form.username}
 					name="username"
 					placeholder='enter your username'
+					disabled= {disable}
 					onChange={(e) => {
 						setForm({ ...form, username: e.target.value })
 					}}
@@ -34,13 +38,14 @@ function Login() {
 			</label>
 			<br />
 			<br />
-			<label>
+			<label backgroundColor="white">
 				email:
 				<input
 					value={form.email}
 					name="email"
 					type="email"
 					placeholder='enter your email'
+					disabled= {disable}
 					onChange={(e) => {
 						setForm({ ...form, email: e.target.value })
 					}}
@@ -55,6 +60,7 @@ function Login() {
 					name="password"
 					type="password"
 					placeholder='enter your password'
+					disabled= {disable}
 					onChange={(e) => {
 						setForm({ ...form, password: e.target.value })
 					}}
@@ -63,7 +69,8 @@ function Login() {
 			
 			<br />
 			<button style={{ padding: "10px 10px", backgroundColor: "whitesmoke" }}
-			 onClick={handleClick}>{showData ? "hide data👍" : "show data"}</button>
+		
+			 onClick={() => setDisable(!disable)}>{showData ? "Edit data👍" : "Submit data"}</button>
 		     
 			{showData? 
 			  <div>
@@ -81,6 +88,7 @@ function Login() {
 
 
 		</div>
+		</form>
 	);
 }
 

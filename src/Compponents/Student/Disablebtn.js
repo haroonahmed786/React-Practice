@@ -7,7 +7,8 @@ function Disable () {
           Email:"",
           Password:""
      });
-     const [disable,setDisable] = useState (0);
+     const [disable,setDisable] = useState (false);
+     
 
      const updateField = e => {
           setUsername({
@@ -17,36 +18,51 @@ function Disable () {
         };
         const handleClick = (e) =>{
             e.preventDefault()
-            setDisable(true);
+          
         }
+        
         return (
-            <form onSubmit={handleClick}>
-                <label>username:</label>
+            <form className="Login-form" onSubmit={handleClick}>
+              <h1>Login</h1>
+                <label>username</label>
                 <input 
                 value={username.Name}
                 name= "Name"
                 onChange={updateField}
+                disabled={disable}
                 />
                 <br />
-                 <label>Email:</label>
+                 <label>Email</label>
                 <input 
                 value={username.Email}
                 name= "Email"
                 type= "Email"
                 onChange={updateField}
+                disabled={disable}
                 />
                   <br />
-                <label>Password:</label>
-                <input 
+                <label>Password</label>
+                <input
                 value={username.Password}
                 name= "Password"
                 type= "Password"
                 onChange={updateField}
+                disabled={disable}
                 />
                 <br />
                 <button style={{ padding: "10px 10px", backgroundColor: "whitesmoke" }}
-                 name ="submit" disabled={disable}>Submit </button>
-               
+                 className= "btn" name ="submit" onClick={() => setDisable(!disable)}>{disable ? "Edit": "Submit"}  </button>
+                
+
+                 {disable? 
+                 <div>
+                  {username.Name}
+                  <br />
+                  {username.Email}
+                  <br />
+                  {username.Password}
+                 </div>
+                 : ''}
             </form>
         )
 }
