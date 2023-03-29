@@ -6,6 +6,7 @@ import App1 from "./Compponents/Student/State";
 import LoginForm from "./Compponents/Student/Form";
 import Login from "./Compponents/Student/Login";
 import Disable from "./Compponents/Student/Disablebtn";
+import {PortFolio} from "./Compponents/Student/Portfolio";
 const Names = ['James', 'John', 'Paul', 'Ringo', 'George'];
 const App = () => {
   const data = [{
@@ -82,6 +83,7 @@ const App = () => {
       <Login />
       <br />
       <Disable />
+      <PortFolio />
     </div>
 
 
