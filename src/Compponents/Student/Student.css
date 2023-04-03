@@ -245,19 +245,7 @@
     height: 1000px;
     justify-content: space-evenly;
   }
-  .input{
-    display: flex;
-    border: 10px solid lightgoldenrodyellow;
-    flex-basis: 50%;
-    color: black;
-   margin-top: 100px;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 10px;
-    margin-top: 90px;
-    background-color: lightgoldenrodyellow;
-  
-  }
+ 
   .img{
     display: flex;
     border: 10px solid lightgoldenrodyellow;
@@ -266,22 +254,22 @@
     width: 500px;
     flex-basis: 30%;
     justify-content: center;
-    margin-top: 70px;
+    margin-top: 185px;
     border-radius: 10px;
     margin-right: 140px;
     
   }
   .H{
+    margin-left: 50px;
     margin-bottom: 200px;
+    justify-content: end;
     align-self: flex-end;
+    align-items: flex-end;
 
   }
 .About{
     margin-top: 60px;
     border-top: 2px solid black;
-    justify-content: flex-start;
-    align-self: flex-start;
-    align-items: flex-start;
 }
 .h7{
     margin-left: 10px;
@@ -299,4 +287,40 @@
 }
 .cont:hover{
     background-color: gray;
+}
+.headh{
+    display: flex;
+    font-style: bold;
+    background-color: gray;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid gray;
+
+}
+
+.home{
+    background-image: url("../../images/home.jpg");
+    height: 80vh;
+    background-Repeat: no-repeat;
+    background-size: cover;
+    background-color: green;
+    background-Position: center;
+    display: flex;
+    text-align: center;  
+    justify-content:center;
+    align-items:center;
+    padding-top: 160px;
+   padding-right: 100px;
+   
+}
+.cont1{
+    background-color: black;
+    color: aliceblue;
+    border-radius: 50px;
+    height: 40px;
+    width: 90px;
+    cursor: pointer;
+    padding: 10px;
+   
+    text-align: center;  
 }

@@ -1,53 +1,29 @@
-import React, { useState } from "react";
+import React from "react";
 import MyImage from "../../images/man.jpg";
+import { useNavigate } from "react-router-dom";
 
 export const PortFolio = () => {
-   const [asd, setInput] = useState ({
-    Name: "",
-    age:"",
-    address:''
-   });  
-
-   const updateField = e =>{
-    setInput({
-        ...asd,
-        [e.target.name]: e.target.value
-    });
-   }
+  const navigate = useNavigate()
    
     return(
     
         <div className="main">
-            <div className="input">
+           
             <div className="H">
-            <h1 >HI!</h1>
-            <h1>I AM HAROON AHMED</h1>
-            <h1>FRONT-END DEVELOPER </h1>
+            <h1 className="headh">HI!</h1>
+            <h1 className="headh">I AM HAROON AHMED</h1>
+            <h1 className="headh">FRONT-END DEVELOPER </h1>
             <div>
              <div className="About">
                 <h6>ABOUT ME</h6>
-                <h1>CREATIVE DESIGNER WITH</h1>
-                <h1>MODERN TECHNIQUES</h1>
-                <h7 className="h7">Hello, I’m HAROON AHMED, I'm a web designer and web developer. I have a passion for web developer and love to create for web and mobile devices.If you have a web based project that you want to get started.</h7>
+                <h1>DEVELOPER OF FRONT-END </h1>
+                
+                <h7 className="h7">Hello, I’m HAROON AHMED, I'm a  web developer. I have a passion for web developer and love to create for web and mobile devices.If you have a web based project that you want to get started.</h7>
             </div>
-            <button className="cont" type="button">CONTACT US</button>
+            <button className="cont" type="button" onClick={()=>navigate("/Disablebtn")}>LOGIN </button>
+            <button className="cont" type="button" onClick={()=>navigate("/HomePage")}>HOME </button>
              </div>
-            </div>
-            <label>Name:</label>
-            <input 
-            value={asd.Name}
-            name="Name"
-            onChange={updateField}
-            placeholder="enter your name"
-            />
-            <br />
-            <label>age:</label>
-            <input 
-            value={asd.age}
-            name="age"
-            onChange={updateField}
-            placeholder="enter your age"
-            />
+           
             </div>
             <div className="img">
              <img src ={MyImage} alt="" />
@@ -56,3 +32,9 @@ export const PortFolio = () => {
         </div>
     )
 }
+  
+
+
+
+
+

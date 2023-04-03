@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter, Route, Routes, } from "react-router-dom";
 import Images from "./Compponents/Images";
 import { Student, Student1, Student2, Student3, Student5, Student6, Arr1, } from "./Compponents/Student/Student";
 import ArrayFilter from "./Compponents/Student/Filter";
@@ -7,6 +8,7 @@ import LoginForm from "./Compponents/Student/Form";
 import Login from "./Compponents/Student/Login";
 import Disable from "./Compponents/Student/Disablebtn";
 import {PortFolio} from "./Compponents/Student/Portfolio";
+import  { HomePage } from "./Compponents/Student/HomePage";
 const Names = ['James', 'John', 'Paul', 'Ringo', 'George'];
 const App = () => {
   const data = [{
@@ -57,34 +59,44 @@ const App = () => {
 
 
   return (
-    <div className="Backgrnd">
-      <h1 className="head">React-Practice</h1>
-      {/* <Student data={data}/>
-       <Student1 data={data} />
-       <Student2 arr = {arr} />
-        <Student3 names= {names} /> */}
-      <div className="img1">
-        <Images />
-        <Images />
-      </div>
-      <Arr1 x={x} />
-      {/* <Student5  task={task} /> */}
-      {/* <div className="condition">
-      <Student6 task={task} />
+//     <div className="Backgrnd">
+//       <h1 className="head">React-Practice</h1>
+//       {/* <Student data={data}/>
+//        <Student1 data={data} />
+//        <Student2 arr = {arr} />
+//         <Student3 names= {names} /> */}
+//       <div className="img1">
+//         <Images />
+//         <Images />
+//       </div>
+//       <Arr1 x={x} />
+//       {/* <Student5  task={task} /> */}
+//       {/* <div className="condition">
+//       <Student6 task={task} />
   
-      </div>
-  */}
+//       </div>
+//   */}
 
-      <div>
-      </div>
-      <ArrayFilter />
-      <App1 />
-      <LoginForm />
-      <Login />
-      <br />
-      <Disable />
-      <PortFolio />
-    </div>
+//       <div>
+//       </div>
+//       <ArrayFilter />
+//       <App1 />
+//       <LoginForm />
+  
+//       <br />
+//       <Disable />
+// <PortFolio/>
+//     </div>
+<BrowserRouter> 
+
+<Routes>
+<Route path="/Disablebtn" element={<Disable/>} />
+<Route  exact path="/" element={<PortFolio/>}/>
+<Route  path="/HomePage" element= {< HomePage/>}/>
+</Routes>
+</BrowserRouter>
+    
+
 
 
   )
