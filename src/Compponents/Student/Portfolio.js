@@ -15,13 +15,15 @@ export const PortFolio = () => {
             <h1 className="headh">FRONT-END DEVELOPER </h1>
             <div>
              <div className="About">
+                <div className="about">
                 <h6>ABOUT ME</h6>
-                <h1>DEVELOPER OF FRONT-END </h1>
+                </div>
+                <h1 className="developer">DEVELOPER OF FRONT-END </h1>
                 
-                <h7 className="h7">Hello, I’m HAROON AHMED, I'm a  web developer. I have a passion for web developer and love to create for web and mobile devices.If you have a web based project that you want to get started.</h7>
+                <h7 className="h7">Hello, I'm HAROON AHMED, I'm a  web developer. I have a passion for web developer and love to create for web and mobile devices.If you have a web based project that you want to get started.</h7>
             </div>
             <button className="cont" type="button" onClick={()=>navigate("/Disablebtn")}>LOGIN </button>
-            <button className="cont" type="button" onClick={()=>navigate("/HomePage")}>HOME </button>
+            <button className="cont" type="button" onClick={()=>navigate("/HomePage")}>DEMO </button>
              </div>
            
             </div>

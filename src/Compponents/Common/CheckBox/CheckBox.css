@@ -1,0 +1,16 @@
+.check{
+    font-family: system-ui, sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.1;
+    gap: 3px ;
+
+}
+.check1{
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+}
